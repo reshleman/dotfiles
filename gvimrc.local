@@ -1,0 +1,10 @@
+" Default Font
+set guifont=Droid\ Sans\ Mono:h16
+
+" Gvim options
+set guioptions-=T
+set guioptions-=m
+set guioptions-=r
+set guioptions-=L
+set guioptions-=t
+set mousehide
