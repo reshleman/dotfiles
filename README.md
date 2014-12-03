@@ -1,12 +1,13 @@
 # reshleman/dotfiles
 
-I use [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles) and
-[reshleman/dotfiles](https://github.com/reshleman/dotfiles) together, using the
-`*.local` convention described in thoughtbot/dotfiles.
+I use [thoughtbot/dotfiles] and [reshleman/dotfiles] together, following the
+[`*.local` convention][dot-local] described in [thoughtbot/dotfiles].
+
+[dot-local]: https://github.com/thoughtbot/dotfiles#make-your-own-customizations
 
 ## Requirements
 
-Set zsh as your login shell.
+Set zsh as the login shell.
 
 ```
 chsh -s /bin/zsh
@@ -21,7 +22,7 @@ brew install rcm
 
 ## Install
 
-Clone onto your computer:
+Clone the dotfiles repos:
 
 ```
 git clone git://github.com/thoughtbot/dotfiles.git $HOME/Code/thoughtbot/dotfiles
@@ -34,17 +35,16 @@ Install:
 env RCRC=$HOME/Code/reshleman/dotfiles/rcrc rcup
 ```
 
-This will create symlinks for thoughtbot and local (reshleman) config files in
-your home directory, giving precedence to personal overrides in
-reshleman/dotfiles.
+This command will create symlinks for [thoughtbot][thoughtbot/dotfiles] and
+[reshleman][reshleman/dotfiles] config files in the home directory. The `RCRC`
+environment variable tells `rcup` to use the configuration options from the
+`rcrc` file:
 
-Additionally, setting the RCRC environment variable tells rcup to use
-configuration options from thoughtbot/dotfiles, such as skipping the README.md
-and LICENSE files when symlinking.
+* Exclude the `README.md` and `LICENSE` files, which do not need to be symlinked.
+* Give precedence to personal overrides in this repository over those in
+  [thoughtbot/dotfiles].
 
-You can safely run this `rcup` command multiple times to update.
-
-(These commands use my preferred file paths; adjust per your preferences.)
+This `rcup` command can safely be run multiple times to update.
 
 ## What's in it?
 
@@ -62,3 +62,6 @@ You can safely run this `rcup` command multiple times to update.
 
 * Chruby configuration
 * Prompt customization
+
+[thoughtbot/dotfiles]: https://github.com/thoughtbot/dotfiles
+[reshleman/dotfiles]: https://github.com/reshleman/dotfiles
