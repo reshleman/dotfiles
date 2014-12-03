@@ -24,14 +24,14 @@ brew install rcm
 Clone onto your computer:
 
 ```
-git clone git://github.com/thoughtbot/dotfiles.git ~/Code/thoughtbot/dotfiles
-git clone git://github.com/reshleman/dotfiles.git ~/Code/reshleman/dotfiles
+git clone git://github.com/thoughtbot/dotfiles.git $HOME/Code/thoughtbot/dotfiles
+git clone git://github.com/reshleman/dotfiles.git $HOME/Code/reshleman/dotfiles
 ```
 
 Install:
 
 ```
-env RCRC=~/Code/thoughtbot/dotfiles/rcrc rcup -d ~/Code/reshleman/dotfiles -d ~/Code/thoughtbot/dotfiles
+env RCRC=$HOME/Code/reshleman/dotfiles/rcrc rcup
 ```
 
 This will create symlinks for thoughtbot and local (reshleman) config files in
