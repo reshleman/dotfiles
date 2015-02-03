@@ -60,7 +60,7 @@ This `rcup` command can safely be run multiple times to update.
 
 [zsh](http://zsh.sourceforge.net/FAQ/zshfaq01.html) configuration and aliases:
 
-* Chruby configuration
+* rbenv configuration
 * Prompt customization
 
 [thoughtbot/dotfiles]: https://github.com/thoughtbot/dotfiles
