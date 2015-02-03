@@ -1,13 +1,16 @@
-# Load chruby and set default ruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby ruby-2.1.5
-
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # recommended by brew doctor
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+# Scripts from thoughtbot/dotfiles
+export PATH="$HOME/.bin:$PATH"
+
+# Load rbenv if available
+if which rbenv &>/dev/null ; then
+  eval "$(rbenv init - --no-rehash)"
+fi
 
 # cdpath for quicker directory switching
 setopt auto_cd
