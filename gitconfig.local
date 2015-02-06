@@ -1,5 +1,7 @@
+[credential]
+  helper = osxkeychain
+[help]
+  autocorrect = 1
 [user]
   name = Robert Eshleman
   email = c.robert.eshleman@gmail.com
-[help]
-  autocorrect = 1
