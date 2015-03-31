@@ -1,3 +1,6 @@
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-dispatch'
+
+" Pending resolution of thoughtbot/vim-rspec#68
+Plugin 'reshleman/vim-rspec', {'name': 'reshleman-vim-rspec'}
