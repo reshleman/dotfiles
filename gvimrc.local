@@ -1,5 +1,5 @@
 " Default Font
-set guifont=Droid\ Sans\ Mono:h16
+set guifont=Inconsolata-g:h16
 
 " Gvim options
 set guioptions-=T
