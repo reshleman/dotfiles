@@ -7,11 +7,18 @@ colorscheme solarized
 " Make Ruby quotes red, not blue (override theme in thoughbot/dotfiles)
 highlight link rubyStringDelimiter Delimiter
 
-" Use Dispatch for vim-rspec
-let g:rspec_command = "Dispatch rspec {spec}"
+" Use vim-tmux-runner for vim-rspec
+let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
 
 " Extra mapping for vim-rspec
 nnoremap <Leader>a :call RunAllSpecs()<CR>
 
 "Auto-indent entire file and return to previous cursor location
 map <Leader>i mmgg=G`m
+
+" Automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" Zoom a vim pane, <leader>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
