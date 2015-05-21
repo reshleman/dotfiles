@@ -14,7 +14,7 @@ fi
 
 # cdpath for quicker directory switching
 setopt auto_cd
-cdpath=($HOME $HOME/Code $HOME/Code/reshleman $HOME/Code/thoughtbot)
+cdpath=($HOME $HOME/Code $HOME/Code/characterlab $HOME/Code/reshleman $HOME/Code/thoughtbot)
 
 ##########
 # Prompt #
