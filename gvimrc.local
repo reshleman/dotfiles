@@ -1,6 +1,9 @@
 " Default Font
 set guifont=Inconsolata-g:h16
 
+" Default window dimensions
+set columns=171 lines=66
+
 " Gvim options
 set guioptions-=T
 set guioptions-=m
