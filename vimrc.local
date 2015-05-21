@@ -8,6 +8,9 @@ colorscheme solarized
 highlight link rubyStringDelimiter Delimiter
 
 " Use vim-tmux-runner for vim-rspec
+nmap <leader>osr :VtrOpenRunner {'orientation': 'h', 'percentage': 50}<cr>
+nnoremap <leader>va :VtrAttachToPane<cr>
+nnoremap <leader>fr :VtrFocusRunner<cr>
 let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
 
 " Extra mapping for vim-rspec
