@@ -1,2 +1,2 @@
-# Foreman
+alias be="bundle exec"
 alias f="foreman start"
