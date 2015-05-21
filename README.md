@@ -51,17 +51,17 @@ This `rcup` command can safely be run multiple times to update.
 
 ## What's in it?
 
-[vim](http://www.vim.org/) configuration:
+### [vim](http://www.vim.org/) configuration:
 
 * Solarized colorscheme
 * Customizations for GUI Vim
 * Ag and vim-dispatch plugins
 
-[git](http://git-scm.com/) configuration:
+### [git](http://git-scm.com/) configuration:
 
 * My name and email
 
-[tmux] configuration:
+### tmux configuration:
 
 * `C-s` prefix key
 * More intuitive pane splitting with `prefix-minus` and `prefix-backslash`
@@ -69,12 +69,12 @@ This `rcup` command can safely be run multiple times to update.
 * Resize panes with {`Shift`,`Ctrl`}-{`Left`,`Right`,`Up`,`Down`}
 * Use `vim-tmux-runner` with `vim-rspec`
 
-Much of this configuration is based on the [Upcase tmux course][1] and
-[Chris Toomey's dotfiles][2].
+Much of this configuration is based on the [Upcase tmux course] and
+[Chris Toomey's dotfiles].
 
 [Upcase tmux course]: https://upcase.com/tmux
 [Chris Toomey's dotfiles]: https://github.com/christoomey/dotfiles/blob/master/tmux/tmux.conf
 
-[zsh](http://zsh.sourceforge.net/FAQ/zshfaq01.html) configuration and aliases:
+### [zsh](http://zsh.sourceforge.net/FAQ/zshfaq01.html) configuration and aliases:
 
 * Prompt customization
