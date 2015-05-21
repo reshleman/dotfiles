@@ -1,17 +1,6 @@
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# recommended by brew doctor
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
-# Scripts from thoughtbot/dotfiles
-export PATH="$HOME/.bin:$PATH"
-
-# Load rbenv if available
-if which rbenv &>/dev/null ; then
-  eval "$(rbenv init - zsh --no-rehash)"
-fi
-
 # cdpath for quicker directory switching
 setopt auto_cd
 cdpath=($HOME $HOME/Code $HOME/Code/characterlab $HOME/Code/reshleman $HOME/Code/thoughtbot)
