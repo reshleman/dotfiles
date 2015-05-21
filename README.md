@@ -46,6 +46,9 @@ environment variable tells `rcup` to use the configuration options from the
 
 This `rcup` command can safely be run multiple times to update.
 
+[thoughtbot/dotfiles]: https://github.com/thoughtbot/dotfiles
+[reshleman/dotfiles]: https://github.com/reshleman/dotfiles
+
 ## What's in it?
 
 [vim](http://www.vim.org/) configuration:
@@ -58,10 +61,20 @@ This `rcup` command can safely be run multiple times to update.
 
 * My name and email
 
+[tmux] configuration:
+
+* `C-s` prefix key
+* More intuitive pane splitting with `prefix-minus` and `prefix-backslash`
+* Vim-like keybindings for pane switching, with awareness of vim splits
+* Resize panes with {`Shift`,`Ctrl`}-{`Left`,`Right`,`Up`,`Down`}
+* Use `vim-tmux-runner` with `vim-rspec`
+
+Much of this configuration is based on the [Upcase tmux course][1] and
+[Chris Toomey's dotfiles][2].
+
+[Upcase tmux course]: https://upcase.com/tmux
+[Chris Toomey's dotfiles]: https://github.com/christoomey/dotfiles/blob/master/tmux/tmux.conf
+
 [zsh](http://zsh.sourceforge.net/FAQ/zshfaq01.html) configuration and aliases:
 
-* rbenv configuration
 * Prompt customization
-
-[thoughtbot/dotfiles]: https://github.com/thoughtbot/dotfiles
-[reshleman/dotfiles]: https://github.com/reshleman/dotfiles
