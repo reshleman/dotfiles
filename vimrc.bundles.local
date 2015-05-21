@@ -1,4 +1,4 @@
-Plug 'altercation/vim-colors-solarized.git'
+Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'rking/ag.vim'
