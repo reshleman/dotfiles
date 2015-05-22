@@ -8,6 +8,9 @@ bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 set-option -g status-left "[#S]"
 set-option -g status-left-length 30
 
+# Make Vim responsive to esc
+set -s escape-time 0
+
 # More intuitive keybindings for splitting
 bind-key - split-window -v -c "#{pane_current_path}"
 bind-key \ split-window -h -c "#{pane_current_path}"
