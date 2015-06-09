@@ -68,6 +68,7 @@ This `rcup` command can safely be run multiple times to update.
 * Vim-like keybindings for pane switching, with awareness of vim splits
 * Resize panes with {`Shift`,`Ctrl`}-{`Left`,`Right`,`Up`,`Down`}
 * Use `vim-tmux-runner` with `vim-rspec`
+* `<prefix>C-b` and `<prefix>K` to break and kill sessions without exiting tmux
 
 Much of this configuration is based on the [Upcase tmux course] and
 [Chris Toomey's dotfiles].

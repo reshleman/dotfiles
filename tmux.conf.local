@@ -49,8 +49,12 @@ bind -n C-Right resize-pane -R 10
 bind -n C-Down resize-pane -D 5
 bind -n C-Up resize-pane -U 5
 
-# Detach the current pane into a new window
+# Detach the current pane into a new background window
 bind-key b break-pane -d
+
+# "break session" and "kill session" without exiting tmux
+bind-key C-b send-keys "tat && exit" "C-m"
+bind-key K run-shell 'tmux switch-client -n \; kill-session -t "$(tmux display-message -p "#S")" || tmux kill-session'
 
 # Make C-j display a selectable list of sessions
 bind C-j choose-tree
