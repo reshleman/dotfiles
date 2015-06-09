@@ -5,6 +5,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 setopt auto_cd
 cdpath=($HOME $HOME/Code $HOME/Code/characterlab $HOME/Code/reshleman $HOME/Code/thoughtbot)
 
+ensure_tmux_is_running
+
 ##########
 # Prompt #
 ##########
