@@ -44,10 +44,18 @@ environment variable tells `rcup` to use the configuration options from the
 * Give precedence to personal overrides in this repository over those in
   [thoughtbot/dotfiles].
 
-This `rcup` command can safely be run multiple times to update.
+After the initial installation, you can run `rcup` without the one-time variable
+`RCRC` being set (`rcup` will symlink the [repo's `rcrc`][rcrc] to `~/.rcrc` for
+future runs of `rcup`).
+
+`rcup` can safely be run multiple times to update.
+
+`rcup` should be run after pulling a new version of the repository to symlink
+any new files in the repository.
 
 [thoughtbot/dotfiles]: https://github.com/thoughtbot/dotfiles
 [reshleman/dotfiles]: https://github.com/reshleman/dotfiles
+[rcrc]: https://github.com/reshleman/dotfiles/blob/master/rcrc
 
 ## What's in it?
 
