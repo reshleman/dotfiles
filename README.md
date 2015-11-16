@@ -13,7 +13,7 @@ Set zsh as the login shell.
 chsh -s /bin/zsh
 ```
 
-Install [rcm](https://github.com/thoughbot/rcm).
+Install [rcm](https://github.com/thoughtbot/rcm).
 
 ```
 brew tap thoughtbot/formulae
