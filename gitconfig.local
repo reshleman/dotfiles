@@ -1,3 +1,5 @@
+[alias]
+  unstage = reset
 [credential]
   helper = osxkeychain
 [help]
