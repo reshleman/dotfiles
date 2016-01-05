@@ -1,5 +1,6 @@
 [alias]
   fall = !for remote in $(git remote); do echo Fetching $remote; git fetch $remote; done
+  glog = log -E -i --grep
   mup = !git checkout master && git pull && git checkout -
   uncommit = reset --soft HEAD^
   unstage = reset
