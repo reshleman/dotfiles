@@ -29,3 +29,6 @@ nnoremap <leader>= :wincmd =<cr>
 " Quickly search dotfiles directories with Ctl-P
 nmap <leader>df :CtrlP ~/Code/reshleman/dotfiles<cr>
 nmap <leader>tdf :CtrlP ~/Code/thoughtbot/dotfiles<cr>
+
+" Reduce wait time for key code or mapped key sequence to complete.
+set timeoutlen=500
