@@ -25,3 +25,7 @@ autocmd VimResized * :wincmd =
 " Zoom a vim pane, <leader>= to re-balance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
+
+" Quickly search dotfiles directories with Ctl-P
+nmap <leader>df :CtrlP ~/Code/reshleman/dotfiles<cr>
+nmap <leader>tdf :CtrlP ~/Code/thoughtbot/dotfiles<cr>
