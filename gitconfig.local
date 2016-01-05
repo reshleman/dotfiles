@@ -1,4 +1,5 @@
 [alias]
+  mup = !git checkout master && git pull && git checkout -
   uncommit = reset --soft HEAD^
   unstage = reset
 [credential]
