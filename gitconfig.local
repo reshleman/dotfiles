@@ -1,4 +1,5 @@
 [alias]
+  uncommit = reset --soft HEAD^
   unstage = reset
 [credential]
   helper = osxkeychain
