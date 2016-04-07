@@ -32,3 +32,6 @@ nmap <leader>tdf :CtrlP ~/Code/thoughtbot/dotfiles<cr>
 
 " Reduce wait time for key code or mapped key sequence to complete.
 set timeoutlen=500
+
+" This is also a coffeescript extension
+autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
