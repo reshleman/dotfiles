@@ -35,3 +35,7 @@ set timeoutlen=500
 
 " This is also a coffeescript extension
 autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
+
+" Show :Ag key mapping hint text in quickfix window
+let g:ag_apply_qmappings = 1
+let g:ag_mapping_message = 1
