@@ -5,6 +5,7 @@
   sla = log --oneline --decorate --graph --all
   uncommit = reset --soft HEAD^
   unstage = reset
+  rr = !git shortlog -sn --since='-1 month' master | cut -f 2- | gshuf -n 1
 [credential]
   helper = osxkeychain
 [help]
