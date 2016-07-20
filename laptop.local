@@ -1,5 +1,6 @@
 #!/bin/sh
 
+brew_install_or_upgrade 'coreutils'
 brew_install_or_upgrade 'macvim'
 brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'watch'
