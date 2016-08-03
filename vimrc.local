@@ -7,10 +7,21 @@ colorscheme solarized
 " Make Ruby quotes red, not blue (override theme in thoughbot/dotfiles)
 highlight link rubyStringDelimiter Delimiter
 
-" Use vim-tmux-runner for vim-rspec
+" Python-friendly settings for vim-tmux-runner, recommended by the README
+let g:VtrStripLeadingWhitespace = 0
+let g:VtrClearEmptyLines = 0
+let g:VtrAppendNewline = 1
+
+" Mappings for opening, attaching, and focusing the tmux runner
 nmap <leader>osr :VtrOpenRunner {'orientation': 'h', 'percentage': 50}<cr>
 nnoremap <leader>va :VtrAttachToPane<cr>
 nnoremap <leader>fr :VtrFocusRunner<cr>
+
+" Mappings to send current and visually-selected line(s) to the tmux runner
+nmap <C-f> :VtrSendLinesToRunner<cr>
+vmap <C-f> :VtrSendLinesToRunner<cr>
+
+" Use vim-tmux-runner for vim-rspec
 let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
 
 " Extra mapping for vim-rspec
