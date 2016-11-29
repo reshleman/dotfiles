@@ -1,6 +1,10 @@
 # Ctrl-s prefix key. Override thoughtbot/dotfiles, which sets Ctrl-a
 set -g prefix C-s
 
+# Allows pbcopy, pbpaste, launchctl, et al. to work within tmux
+# See https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+
 # Reload tmux.conf with prefix-r
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 
