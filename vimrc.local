@@ -30,6 +30,10 @@ nnoremap <Leader>a :call RunAllSpecs()<CR>
 "Auto-indent entire file and return to previous cursor location
 map <Leader>i mmgg=G`m
 
+"Format JSON and XML
+map <Leader>js :silent %!python -m json.tool<cr>
+map <Leader>xml :silent %!xmllint --format --recover - 2>/dev/null<cr>
+
 " Automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 
