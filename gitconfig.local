@@ -6,6 +6,7 @@
   uncommit = reset --soft HEAD^
   unstage = reset
   rr = !git shortlog -sn --since='-1 month' master | cut -f 2- | gshuf -n 1
+  wip = !git add . && git commit -nm 'WIP'
 [credential]
   helper = osxkeychain
 [help]
