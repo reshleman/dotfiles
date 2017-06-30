@@ -14,3 +14,6 @@
 [user]
   name = Robert Eshleman
   email = c.robert.eshleman@gmail.com
+  signingkey = 39A0B973C4051280
+[commit]
+  gpgsign = true
