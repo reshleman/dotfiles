@@ -1,3 +1,9 @@
+" No audible bell
+set vb
+
+" Use console dialogs
+set guioptions+=c
+
 " Default Font
 set guifont=Inconsolata-g:h16
 
