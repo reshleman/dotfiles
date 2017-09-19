@@ -17,3 +17,4 @@
   signingkey = F8620C31DC7D25AF
 [commit]
   gpgsign = true
+  verbose = true
