@@ -3,6 +3,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-dispatch'
+Plug 'vim-python/python-syntax'
 
 " Pending resolution of thoughtbot/vim-rspec#68
 Plug 'reshleman/vim-rspec', {'name': 'reshleman-vim-rspec'}
