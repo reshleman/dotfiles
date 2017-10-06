@@ -1,3 +1,0 @@
-alias be="bundle exec"
-alias gap="git add --patch"
-alias f="foreman start"

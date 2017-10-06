@@ -160,7 +160,80 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
-" Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
+" Color Settings
+set t_Co=256
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+
+" Make Ruby quotes red, not blue (override theme in thoughbot/dotfiles)
+highlight link rubyStringDelimiter Delimiter
+
+" Python-friendly settings for vim-tmux-runner, recommended by the README
+let g:VtrStripLeadingWhitespace = 0
+let g:VtrClearEmptyLines = 0
+let g:VtrAppendNewline = 1
+
+" Mappings for opening, attaching, and focusing the tmux runner
+nmap <leader>osr :VtrOpenRunner {'orientation': 'h', 'percentage': 50}<cr>
+nnoremap <leader>va :VtrAttachToPane<cr>
+nnoremap <leader>fr :VtrFocusRunner<cr>
+
+" Mappings to send current and visually-selected line(s) to the tmux runner
+nmap <C-f> :VtrSendLinesToRunner<cr>
+vmap <C-f> :VtrSendLinesToRunner<cr>
+
+" Use vim-tmux-runner for vim-rspec
+let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
+
+" Extra mapping for vim-rspec
+nnoremap <Leader>a :call RunAllSpecs()<CR>
+
+"Auto-indent entire file and return to previous cursor location
+map <Leader>i mmgg=G`m
+
+"Format JSON and XML
+map <Leader>js :silent %!python -m json.tool<cr>
+map <Leader>xml :silent %!xmllint --format --recover - 2>/dev/null<cr>
+
+" Automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" Zoom a vim pane, <leader>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+" Quickly search dotfiles directories with Ctl-P
+nmap <leader>df :CtrlP ~/Code/reshleman/dotfiles<cr>
+nmap <leader>tdf :CtrlP ~/Code/thoughtbot/dotfiles<cr>
+
+" Reduce wait time for key code or mapped key sequence to complete.
+set timeoutlen=500
+
+" This is also a coffeescript extension
+autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
+
+" Show :Ag key mapping hint text in quickfix window
+let g:ag_apply_qmappings = 1
+let g:ag_mapping_message = 1
+
+" Always use global Python linters, not those from a virtualenv
+let g:ale_python_flake8_use_global=1
+let g:ale_python_pylint_use_global=1
+
+" Use project-specific Python linter config, if available
+if filereadable("etc/pep8.cfg")
+  let g:ale_python_flake8_options="--config=etc/pep8.cfg"
 endif
+if filereadable("etc/pylintrc")
+  let g:ale_python_pylint_options="--rcfile=etc/pylintrc"
+endif
+
+" Enable all syntax highlighting from 'vim-python/python-syntax'
+let g:python_highlight_all = 1
+highlight link pythonBoolean Identifier
+highlight link pythonNone Identifier
+
+" 'vim-python/python-syntax' is sometimes unusably slow when using the default
+" regex engine; forcing the 'old' engine appears to resolve this.
+set regexpengine=1

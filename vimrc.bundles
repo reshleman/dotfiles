@@ -41,8 +41,14 @@ if g:has_async
   Plug 'w0rp/ale'
 endif
 
-if filereadable(expand("~/.vimrc.bundles.local"))
-  source ~/.vimrc.bundles.local
-endif
+Plug 'altercation/vim-colors-solarized'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-dispatch'
+Plug 'vim-python/python-syntax'
+
+" Pending resolution of thoughtbot/vim-rspec#68
+Plug 'reshleman/vim-rspec', {'name': 'reshleman-vim-rspec'}
 
 call plug#end()

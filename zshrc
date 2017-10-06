@@ -41,8 +41,20 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-# Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+# Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# cdpath for quicker directory switching
+setopt auto_cd
+cdpath=($HOME $HOME/Code $HOME/Code/warbyparker $HOME/Code/reshleman $HOME/Code/thoughtbot)
+
+ensure_tmux_is_running
+
+# Required for gpg-agent (else "Inappropriate ioctl for device")
+export GPG_TTY=$(tty)
+
+# Vagrant Configuration
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
