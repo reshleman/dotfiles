@@ -44,6 +44,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+  autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
 
   " ALE linting events
   if g:has_async
@@ -54,7 +55,7 @@ augroup vimrcEx
     autocmd InsertEnter * call ale#Lint()
     autocmd InsertLeave * call ale#Lint()
   else
-    echoerr "The thoughtbot dotfiles require NeoVim or Vim 8"
+    echoerr "ALE requires NeoVim or Vim 8"
   endif
 augroup END
 
@@ -150,8 +151,7 @@ nnoremap <C-l> <C-w>l
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
-" Set spellfile to location that is guaranteed to exist, can be symlinked to
-" Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
+" Set spellfile
 set spellfile=$HOME/.vim-spell-en.utf-8.add
 
 " Autocomplete with dictionary words when spell check is on
@@ -203,15 +203,11 @@ autocmd VimResized * :wincmd =
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
-" Quickly search dotfiles directories with Ctl-P
+" Quickly search dotfiles with Ctl-P
 nmap <leader>df :CtrlP ~/Code/reshleman/dotfiles<cr>
-nmap <leader>tdf :CtrlP ~/Code/thoughtbot/dotfiles<cr>
 
 " Reduce wait time for key code or mapped key sequence to complete.
 set timeoutlen=500
-
-" This is also a coffeescript extension
-autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
 
 " Show :Ag key mapping hint text in quickfix window
 let g:ag_apply_qmappings = 1
