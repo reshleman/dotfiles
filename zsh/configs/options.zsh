@@ -7,3 +7,7 @@ setopt extendedglob
 
 # Allow [ or ] whereever you want
 unsetopt nomatch
+
+# cdpath for quicker directory switching
+setopt auto_cd
+cdpath=($HOME $HOME/Code $HOME/Code/warbyparker $HOME/Code/reshleman)
