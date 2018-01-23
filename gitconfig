@@ -33,6 +33,8 @@
   prune = true
 [rebase]
   autosquash = true
+[diff]
+  colorMoved = zebra
 [credential]
   helper = osxkeychain
 [help]
