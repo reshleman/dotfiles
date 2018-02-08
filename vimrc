@@ -75,6 +75,11 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Use one space, not two, after punctuation.
 set nojoinspaces
 
+" Text formatting:
+" - (j) remove comment leader when joining lines
+" - (n) recognize numbered lists
+set formatoptions+=jn
+
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
