@@ -225,9 +225,11 @@ let g:ale_python_pylint_use_global=1
 " Use project-specific Python linter config, if available
 if filereadable("etc/pep8.cfg")
   let g:ale_python_flake8_options="--config=etc/pep8.cfg"
+  let g:ale_python_flake8_change_directory=0
 endif
 if filereadable("etc/pylintrc")
   let g:ale_python_pylint_options="--rcfile=etc/pylintrc"
+  let g:ale_python_pylint_change_directory=0
 endif
 
 " Enable all syntax highlighting from 'vim-python/python-syntax'
