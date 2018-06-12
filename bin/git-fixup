@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Amend a commit which is not HEAD by committing a fixup and rebasing onto the
+# parent commit.
+
+set -e
+
+target=$(git rev-parse "$1")
+
+if git rev-list master | grep -q "$(git rev-parse "$target")"; then
+  echo "Cannot fixup a commit on the master branch."
+  exit 1
+fi
+
+git commit --fixup="$target" "${@:2}" &&
+GIT_EDITOR=true git rebase -i --autostash --autosquash "$target"^
