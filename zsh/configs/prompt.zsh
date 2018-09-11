@@ -33,8 +33,23 @@ dir_prompt_info() {
 
 # If the shell is running with priviliges (e.g., root), then #, else $.
 prompt_info() {
-  echo " %(!.#.$) "
+  echo "%(!.#.$) "
+}
+
+# `precmd` is a hook function that's run right before the prompt is evaluated
+# We use it to capture the previous exit code to show in the prompt.
+precmd() {
+  echo $? 2> /dev/null >! "/tmp/last-exit-code-$$"
+}
+
+# Prompt info in green if the last exit code was 0; red otherwise.
+last_exit_code_prompt_info() {
+  if [[ $(cat "/tmp/last-exit-code-$$") -ne 0 ]]; then
+    prompt_red "$(prompt_info)"
+  else
+    prompt_green "$(prompt_info)"
+  fi
 }
 
 # Concat the entire prompt
-export PS1='$(dir_prompt_info)$(git_prompt_info)$(prompt_info)'
+PROMPT='$(dir_prompt_info)$(git_prompt_info)$(last_exit_code_prompt_info)'
