@@ -36,6 +36,8 @@
   autosquash = true
 [diff]
   colorMoved = zebra
+[branch]
+  sort = -committerdate
 [credential]
   helper = osxkeychain
 [help]
