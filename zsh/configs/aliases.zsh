@@ -19,3 +19,6 @@ alias f="foreman start"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
+
+# Tmux
+alias mux="tmuxinator"
