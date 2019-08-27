@@ -9,10 +9,11 @@
   ap = add --patch
   branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
   ci = commit -v
+  cleanup = !git branch --merged master | grep -v "\\*" | grep -v "master" | xargs -n 1 git branch -d
   co = checkout
   fall = !for remote in $(git remote); do echo Fetching $remote; git fetch $remote; done
   glog = log -E -i --grep
-  mup = !git checkout master && git pull && git checkout -
+  mup = !git checkout master && git pull && git cleanup && git checkout -
   pf = push --force-with-lease
   recommit = commit -eF .git/COMMIT_EDITMSG
   rr = !git shortlog -sn --since='-1 month' master | cut -f 2- | gshuf -n 1
