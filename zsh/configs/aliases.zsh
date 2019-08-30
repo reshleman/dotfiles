@@ -7,6 +7,7 @@ alias v="$VISUAL"
 
 # Git
 alias gap="git add --patch"
+alias pop="git stash pop"
 
 # Bundler
 alias b="bundle"
