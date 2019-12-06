@@ -235,8 +235,6 @@ endif
 
 " Enable all syntax highlighting from 'vim-python/python-syntax'
 let g:python_highlight_all = 1
-highlight link pythonBoolean Identifier
-highlight link pythonNone Identifier
 
 " 'vim-python/python-syntax' is sometimes unusably slow when using the default
 " regex engine; forcing the 'old' engine appears to resolve this.
