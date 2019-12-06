@@ -243,6 +243,8 @@ if filereadable("etc/pylintrc")
   let g:ale_python_pylint_change_directory=0
 endif
 
+let g:ale_linters = {'python': ['pylint', 'flake8']}
+
 " Enable all syntax highlighting from 'vim-python/python-syntax'
 let g:python_highlight_all = 1
 
