@@ -215,6 +215,16 @@ nmap <leader>df :CtrlP ~/Code/reshleman/dotfiles<cr>
 " Reduce wait time for key code or mapped key sequence to complete.
 set timeoutlen=500
 
+" Set up persistent undo
+if has('persistent_undo')
+    let s:myUndoDir = expand('$HOME/.vimundo')
+    if !isdirectory(s:myUndoDir)
+      call mkdir(s:myUndoDir, 'p')
+    endif
+    execute 'set undodir=' . s:myUndoDir
+    set undofile
+endif
+
 " Show :Ag key mapping hint text in quickfix window
 let g:ag_apply_qmappings = 1
 let g:ag_mapping_message = 1
