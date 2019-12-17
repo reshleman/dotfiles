@@ -143,6 +143,9 @@ nnoremap <Leader>r :RunInInteractiveShell<space>
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
+" Set tags for vim-fugitive
+set tags^=.git/tags
+
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
