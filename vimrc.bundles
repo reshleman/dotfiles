@@ -36,6 +36,7 @@ endif
 Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
+Plug 'digitaltoad/vim-pug'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-python/python-syntax'
