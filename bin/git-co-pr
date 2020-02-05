@@ -2,5 +2,5 @@
 
 set -e
 
-git fetch origin "pull/$1/head:pr/$1"
+git fetch upstream "pull/$1/head:pr/$1"
 git checkout "pr/$1"
