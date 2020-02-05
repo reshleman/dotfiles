@@ -254,3 +254,6 @@ let g:python_highlight_all = 1
 " 'vim-python/python-syntax' is sometimes unusably slow when using the default
 " regex engine; forcing the 'old' engine appears to resolve this.
 set regexpengine=1
+
+" Things I cannot type correctly
+iabbrev shipiment shipment
