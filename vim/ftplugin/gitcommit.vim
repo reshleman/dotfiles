@@ -2,4 +2,4 @@
 setlocal textwidth=72
 setlocal spell
 
-command! -nargs=1 -buffer Jira :normal i[<args>](https://warbyparker.atlassian.net/browse/<args>)<ESC>
+command! -nargs=1 -buffer Jira :normal i[<args>](https://transfix.atlassian.net/browse/<args>)<ESC>
