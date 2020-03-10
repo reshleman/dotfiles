@@ -192,11 +192,14 @@ nnoremap <leader>fr :VtrFocusRunner<cr>
 nmap <C-f> :VtrSendLinesToRunner<cr>
 vmap <C-f> :VtrSendLinesToRunner<cr>
 
-" Use vim-tmux-runner for vim-rspec
-let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
-
-" Extra mapping for vim-rspec
-nnoremap <Leader>a :call RunAllSpecs()<CR>
+" Configure vim-test to use vim-tmux-runner to execute test commands
+" (The default 'vtr' strategy for vim-test opens a new pane instead of using the
+" attached tmux pane)
+function! VimTestVtrCustomStrategy(cmd)
+  call VtrSendCommand(a:cmd)
+endfunction
+let g:test#custom_strategies = { 'vtr_custom': function('VimTestVtrCustomStrategy')}
+let g:test#strategy = "vtr_custom"
 
 "Auto-indent entire file and return to previous cursor location
 map <Leader>i mmgg=G`m

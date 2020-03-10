@@ -17,6 +17,3 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=t
 set mousehide
-
-" Use dispatch for vim-rspec
-let g:rspec_command = "Dispatch rspec {spec}"

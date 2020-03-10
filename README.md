@@ -73,7 +73,7 @@ loaded first, and `post` for files that must be loaded last.
 * Map `<leader>ct` to re-index [Exuberant Ctags](http://ctags.sourceforge.net/).
 * Use [vim-mkdir](https://github.com/pbrisbin/vim-mkdir) for automatically
   creating non-existing directories before writing the buffer.
-* Ag and vim-dispatch plugins
+* Ag plugin
 * Solarized colorscheme
 * Customizations for GUI Vim
 * Switch between the last two files with space-space.
@@ -95,7 +95,7 @@ loaded first, and `post` for files that must be loaded last.
 * More intuitive pane splitting with `prefix-minus` and `prefix-backslash`
 * Vim-like keybindings for pane switching, with awareness of vim splits
 * Resize panes with {`Shift`,`Ctrl`}-{`Left`,`Right`,`Up`,`Down`}
-* Use `vim-tmux-runner` with `vim-rspec`
+* Use `vim-tmux-runner`
 * `<prefix>C-b` and `<prefix>K` to break and kill sessions without exiting tmux
 * Integrate w/ system clipboard in copy mode
 
