@@ -2,4 +2,14 @@
 setlocal textwidth=72
 setlocal spell
 
-command! -nargs=1 -buffer Jira :normal i[<args>](https://transfix.atlassian.net/browse/<args>)<ESC>
+function! s:JiraMarkdownLink(...)
+  if a:0 == 0  " No args provided, use git branch name
+    let l:ticket_num = fugitive#Head()
+  else  " Ticket number is passed as only argument
+    let l:ticket_num = a:1
+  endif
+
+  return "[" . l:ticket_num . "](https://transfix.atlassian.net/browse/" . l:ticket_num . ")"
+endfunction
+
+command! -nargs=? -buffer Jira :normal "=s:JiraMarkdownLink(<f-args>)<C-M>p
