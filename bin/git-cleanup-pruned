@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Delete local branches with stale (e.g., deleted) remote references.
+# The single argument is the remote to prune from.
+
+set -e
+
+if [ "$#" -ne 1 ]; then
+  echo "Usage: git cleanup-pruned <remote>"
+  exit 1
+fi
+
+local_branches=$(git branch --format='%(refname:short)' | uniq | sort)
+pruned_branches=$(git remote prune $1 --dry-run | tail -n +3 | sed "s/^.*$1\///g" | uniq | sort)
+
+comm -12 <(echo "$local_branches") <(echo "$pruned_branches") | xargs -L1 git branch -D
