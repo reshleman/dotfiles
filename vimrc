@@ -201,6 +201,10 @@ endfunction
 let g:test#custom_strategies = { 'vtr_custom': function('VimTestVtrCustomStrategy')}
 let g:test#strategy = "vtr_custom"
 
+" Configure vim-test to use spring directly if the rspec binstubs are not
+" instrumented with spring:
+let test#ruby#use_spring_binstub = 1
+
 "Auto-indent entire file and return to previous cursor location
 map <Leader>i mmgg=G`m
 
