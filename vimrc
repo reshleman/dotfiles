@@ -41,10 +41,12 @@ augroup vimrcEx
     \ endif
 
   " Set syntax highlighting for specific file types
+  " TODO: Move to ~/.vim/ftdetect/(ext).vim
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
   autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
+  autocmd BufRead,BufNewFile *.mjml set filetype=eruby.html.mjml
 
   " ALE linting events
   if g:has_async
