@@ -22,6 +22,11 @@
   uncommit = reset --soft HEAD^
   unstage = reset
   wip = !git add . && git commit -nm 'WIP'
+
+  # Quote / unquote a sh command, converting it to / from a git alias string
+  # https://stackoverflow.com/questions/38057261
+  quote-string = "!read -r l; printf \\\"!; printf %s \"$l\" | sed 's/\\([\\\"]\\)/\\\\\\1/g'; printf \" #\\\"\\n\" #"
+  quote-string-undo = "!read -r l; printf %s \"$l\" | sed 's/\\\\\\([\\\"]\\)/\\1/g'; printf \"\\n\" #"
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
