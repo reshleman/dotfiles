@@ -5,6 +5,3 @@ brew_install_or_upgrade 'jq'
 brew_install_or_upgrade 'macvim'
 brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'watch'
-
-gem_install_or_update 'parity'
-gem_install_or_update 'suspenders'

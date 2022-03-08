@@ -15,7 +15,4 @@ fi
 # mkdir .git/safe in the root of repositories you trust
 PATH=".git/safe/../../bin:$PATH"
 
-# Added by the Heroku Toolbelt
-PATH="/usr/local/heroku/bin:$PATH"
-
 export -U PATH
