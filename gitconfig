@@ -33,7 +33,6 @@
 [merge]
   ff = only
 [commit]
-  gpgsign = true
   template = ~/.gitmessage
   verbose = true
 [fetch]
@@ -51,4 +50,3 @@
 [user]
   name = Robert Eshleman
   email = c.robert.eshleman@gmail.com
-  signingkey = B09405940C7FC1C2
