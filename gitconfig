@@ -50,3 +50,5 @@
 [user]
   name = Robert Eshleman
   email = c.robert.eshleman@gmail.com
+[include]
+  path = ~/.gitconfig.local
