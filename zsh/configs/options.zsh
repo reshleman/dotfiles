@@ -10,4 +10,4 @@ unsetopt nomatch
 
 # cdpath for quicker directory switching
 setopt auto_cd
-cdpath=($HOME $HOME/Code $HOME/Code/transfixio $HOME/Code/reshleman)
+cdpath=($HOME $HOME/Code $HOME/stripe $HOME/Code/reshleman)
