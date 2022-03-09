@@ -41,4 +41,9 @@ Plug 'digitaltoad/vim-pug'
 Plug 'rking/ag.vim'
 Plug 'vim-python/python-syntax'
 
+" Local config
+if filereadable($HOME . "/.vimrc.bundles.local")
+  source ~/.vimrc.bundles.local
+endif
+
 call plug#end()
