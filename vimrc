@@ -266,3 +266,8 @@ set regexpengine=1
 
 " Things I cannot type correctly
 iabbrev shipiment shipment
+
+" Local config
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
