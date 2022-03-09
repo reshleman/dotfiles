@@ -13,7 +13,9 @@ prompt_spaced() { [[ -n "$1" ]] && print " $@" }
 
 # Show an asterisk if the working directory is not clean.
 parse_git_dirty() {
-  if [[ -n $(git status --porcelain) ]]; then
+  if [[ $DISABLE_PROMPT_GIT_STATUS -eq 1 ]]; then
+    echo -n "?"
+  elif [[ -n $(git status --porcelain) ]]; then
     echo -n "*"
   fi
 }
