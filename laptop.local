@@ -1,7 +1,10 @@
 #!/bin/sh
 
-brew_install_or_upgrade 'coreutils'
-brew_install_or_upgrade 'jq'
-brew_install_or_upgrade 'macvim'
-brew_install_or_upgrade 'tree'
-brew_install_or_upgrade 'watch'
+brew bundle --file=- <<EOF
+  brew 'coreutils'
+  brew 'fzf'
+  brew 'jq'
+  brew 'macvim'
+  brew 'tree'
+  brew 'watch'
+EOF

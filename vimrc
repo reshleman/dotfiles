@@ -88,11 +88,8 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ag_prg="ag --vimgrep"
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+  " Use ag in fzf for listing files. Lightning fast and respects .gitignore
+  let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
 
   if !exists(":Ag")
     command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
@@ -162,6 +159,9 @@ nnoremap <C-l> <C-w>l
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
+" Map Ctrl + p to open fuzzy find (FZF)
+nnoremap <c-p> :Files<cr>
+
 " Set spellfile
 set spellfile=$HOME/.vim-spell-en.utf-8.add
 
@@ -222,7 +222,7 @@ nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
 " Quickly search dotfiles with Ctl-P
-nmap <leader>df :CtrlP ~/Code/reshleman/dotfiles<cr>
+nmap <leader>df :Files ~/Code/reshleman/dotfiles<cr>
 
 " Reduce wait time for key code or mapped key sequence to complete.
 set timeoutlen=500

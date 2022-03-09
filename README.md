@@ -61,8 +61,7 @@ loaded first, and `post` for files that must be loaded last.
 
 * Set `<leader>` to a single space.
 * Use [vim-plug](https://github.com/junegunn/vim-plug) to manage plugins.
-* [Ctrl-P](https://github.com/ctrlpvim/ctrlp.vim) for fuzzy file/buffer/tag
-  finding.
+* [fzf](https://github.com/junegunn/fzf.vim) for fuzzy file/buffer/tag finding.
 * [Rails.vim](https://github.com/tpope/vim-rails) for enhanced navigation of
   Rails file structure via `gf` and `:A` (alternate), `:Rextract` partials,
   `:Rinvert` migrations, etc.
