@@ -30,6 +30,10 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
+  preloadindex = true
+  deltabasecachelimit = 4g
+[feature]
+  manyfiles = true
 [merge]
   ff = only
 [commit]
