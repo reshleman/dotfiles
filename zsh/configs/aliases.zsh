@@ -8,6 +8,7 @@ alias v="$VISUAL"
 # Git
 alias gap="git add --patch"
 alias pop="git stash pop"
+alias gb='git checkout $(git branch -a | fzf)'
 
 # Bundler
 alias b="bundle"

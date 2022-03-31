@@ -11,6 +11,7 @@
   ci = commit -v
   cleanup-merged = !git branch --merged master | grep -v "\\*" | grep -v "master" | xargs -n 1 git branch -d
   co = checkout
+  cob = "!f() { git checkout -b $USER/$1; }; f"
   fall = !for remote in $(git remote); do echo Fetching $remote; git fetch $remote; done
   glog = log -E -i --grep
   mup = !git checkout master && git cleanup-pruned origin && git pull && git checkout -
