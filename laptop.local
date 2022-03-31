@@ -5,6 +5,7 @@ brew bundle --file=- <<EOF
   brew 'fzf'
   brew 'jq'
   brew 'macvim'
+  brew 'tmuxinator'
   brew 'tree'
   brew 'watch'
 EOF
