@@ -24,3 +24,6 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Tmux
 alias mux="tmuxinator"
+
+# Neovim
+alias vim="nvim"
