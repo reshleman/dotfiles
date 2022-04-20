@@ -255,6 +255,7 @@ endif
 
 let g:ale_linters = {
 \  'python': ['pylint', 'flake8'],
+\  'ruby': ['rubocop'],
 \}
 
 let g:ale_fixers = {
@@ -265,6 +266,17 @@ let g:ale_fix_on_save = 1
 
 " Enable all syntax highlighting from 'vim-python/python-syntax'
 let g:python_highlight_all = 1
+
+" LSP Setup
+nnoremap <silent> <leader>l0  <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> <leader>ld  <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <leader>li  :LspInfo<CR>
+nnoremap <silent> <leader>lh  <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <leader>lD  <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <leader>ln  <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <silent> <leader>lr  <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <leader>lt  <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> <leader>lw  <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 
 " 'vim-python/python-syntax' is sometimes unusably slow when using the default
 " regex engine; forcing the 'old' engine appears to resolve this.
