@@ -208,6 +208,8 @@ let test#ruby#use_spring_binstub = 1
 "Auto-indent entire file and return to previous cursor location
 map <Leader>i mmgg=G`m
 
+map <leader>bp orequire 'pry'; binding.pry<esc>
+
 "Format JSON and XML
 map <Leader>js :silent %!python -m json.tool<cr>
 map <Leader>xml :silent %!xmllint --format --recover - 2>/dev/null<cr>
