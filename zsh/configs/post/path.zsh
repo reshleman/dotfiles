@@ -1,6 +1,10 @@
 # ensure dotfiles bin directory is loaded first
 PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 
+# Go
+export GOPATH=$HOME/go
+PATH="$GOPATH/bin:$PATH"
+
 # Load ASDF
 if [ -f "$HOME/.asdf/asdf.sh" ]; then
   # Try loading ASDF from the regular home dir location
