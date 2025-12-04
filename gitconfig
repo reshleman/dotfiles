@@ -17,6 +17,7 @@
   glog = log -E -i --grep
   mup = !git checkout master && git cleanup-pruned origin && git pull && git checkout -
   pf = push --force-with-lease
+  push-open = "! f() { URL="`git config remote.origin.url`"; URL="${URL/.git/}"; URL="${URL/git@/}"; URL="${URL/://}"; git push "$@" && open "https://${URL}/pull/`git branch --show-current`"; }; f"
   recommit = commit -eF .git/COMMIT_EDITMSG
   rr = !git shortlog -sn --since='-1 month' master | cut -f 2- | gshuf -n 1
   sla = log --oneline --decorate --graph --all
