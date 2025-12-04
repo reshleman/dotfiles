@@ -2,6 +2,7 @@
   templatedir = ~/.git_template
 [push]
   default = current
+  autoSetupRemote = true
 [color]
   ui = auto
 [alias]
