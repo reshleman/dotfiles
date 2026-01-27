@@ -5,15 +5,15 @@ PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 export GOPATH=$HOME/go
 PATH="$GOPATH/bin:$PATH"
 
-# Load ASDF
+# Load ASDF:
 if [ -f "$HOME/.asdf/asdf.sh" ]; then
   # Try loading ASDF from the regular home dir location
   . "$HOME/.asdf/asdf.sh"
 elif which brew >/dev/null &&
   # If ASDF has been installed via Homebrew, the completions file is in a different place
-  BREW_DIR="$(dirname $(which brew))/.." &&
-  [ -f "$BREW_DIR/opt/asdf/asdf.sh" ]; then
-  . "$BREW_DIR/opt/asdf/asdf.sh"
+  [ -f "$(brew --prefix asdf)/libexec/asdf.sh" ]; then
+  echo "sourcing asdf.sh"
+  . "$(brew --prefix asdf)/libexec/asdf.sh"
 fi
 
 # mkdir .git/safe in the root of repositories you trust
