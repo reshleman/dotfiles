@@ -12,7 +12,6 @@ if [ -f "$HOME/.asdf/asdf.sh" ]; then
 elif which brew >/dev/null &&
   # If ASDF has been installed via Homebrew, the completions file is in a different place
   [ -f "$(brew --prefix asdf)/libexec/asdf.sh" ]; then
-  echo "sourcing asdf.sh"
   . "$(brew --prefix asdf)/libexec/asdf.sh"
 fi
 
