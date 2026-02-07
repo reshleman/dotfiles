@@ -5,6 +5,9 @@ PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 export GOPATH=$HOME/go
 PATH="$GOPATH/bin:$PATH"
 
+# Required for Claude Code
+PATH="$HOME/.local/bin:$PATH"
+
 # Load ASDF:
 if [ -f "$HOME/.asdf/asdf.sh" ]; then
   # Try loading ASDF from the regular home dir location
